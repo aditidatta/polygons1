@@ -2,9 +2,11 @@
 angular.module('AlgoService', []).factory('Algorithm', ['$http', function($http) {
 
     return {
-        // call to get all nalgos
+        // call to get all algos
         get: function() {
-            return $http.get('/api/algos');
+            l = $http.get('/api/algos');
+            console.log(l);
+            return l;
         },
 
         // these will work when more API routes are defined on the Node side of things
