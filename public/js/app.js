@@ -1,0 +1,1 @@
+angular.module('polygons', ['ngRoute', 'appRoutes', 'MainCtrl', 'AlgoCtrl', 'AlgoService']);

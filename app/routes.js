@@ -1,12 +1,12 @@
-var Article = require('./models/Article');
+var Algorithm = require('./models/algo');
 
 module.exports = function(app) {
-    app.get('/api/articles', function(req, res) {
-        Article.find(function(err, articles) {
+    app.get('/api/algos', function(req, res) {
+        Algorithm.find(function(err, algos) {
             if (err)
                 res.send(err);
 
-            res.json(articles);
+            res.json(algos);
         });
     });
 
