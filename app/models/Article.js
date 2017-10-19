@@ -5,7 +5,7 @@ module.exports = mongoose.model('Article', {
         type: String,
         default: 'Put an Article name here'
     },
-    body: {
+    fname: {
         type: String,
         default: 'This is the article body.'
     }
