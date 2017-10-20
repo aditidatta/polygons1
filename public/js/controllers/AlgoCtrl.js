@@ -1,13 +1,10 @@
 // public/js/controllers/AlgoCtrl.js
-angular.module('AlgoCtrl', []).controller('AlgoController', ['$scope',
-    'Algorithm',
-    function($scope, Algorithm) {
+angular.module('AlgoCtrl', []).controller('AlgoController', function($scope, $http) {
 
-        $scope.tagline = 'List of algorithms';
-        Algorithm.get().success(function(data) {
-            //$scope.todos = data;
-            console.log(data);
-        });
+    $scope.tagline = 'List of algorithms';
+    $http.get('/api/algos').success(function(data) {
+        //$scope.todos = data;
+        console.log(data);
+    });
 
-    }
-]);
+});
