@@ -7,7 +7,7 @@ angular.module('appRoutes', []).config(['$routeProvider', '$locationProvider', f
         .when('/', {
         templateUrl: 'views/home.html',
         controller: 'MainController',
-        css: './css/views.css'
+        css: 'css/views.css'
     })
 
     // algo page that will use the AlgoController

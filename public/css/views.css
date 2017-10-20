@@ -1,4 +1,4 @@
-body>div>div>div>h3 {
+div div h3 {
     display: inline-block;
     font-size: 24px;
     border-bottom: 2px solid #000000;
