@@ -4,7 +4,10 @@ angular.module('AlgoCtrl', []).controller('AlgoController', ['$scope',
     function($scope, Algorithm) {
 
         $scope.tagline = 'List of algorithms';
-        Algorithm.get();
+        Algorithm.get().success(function(data) {
+            //$scope.todos = data;
+            console.log(data);
+        });
 
     }
 ]);
