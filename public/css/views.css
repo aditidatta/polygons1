@@ -1,9 +1,20 @@
-h3 {
-    display: inline-block;
-    font-size: 24px;
+.home h3 {
     border-bottom: 2px solid #000000;
 }
 
-span {
+.home h4 {
+    display: inline-block;
+    /*border-bottom: 1px solid #000000;
+    font-family: "Courier New", Monospace;*/
+    font-weight: bold;
+}
+
+.home span {
     margin-left: 10px;
+    /*font-family: "Courier New", Monospace;*/
+    font-size: 16px;
+}
+
+.home p {
+    font-size: 16px;
 }

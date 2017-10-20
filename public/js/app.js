@@ -1,1 +1,1 @@
-angular.module('polygons', ['ngRoute', 'appRoutes', 'MainCtrl', 'AlgoCtrl', 'ProjCtrl', 'ResearchCtrl', 'AlgoService']);
+angular.module('polygons', ['ngRoute', 'ngRepeat', 'appRoutes', 'MainCtrl', 'AlgoCtrl', 'ProjCtrl', 'ResearchCtrl', 'AlgoService']);
