@@ -4,7 +4,7 @@ angular.module('AlgoCtrl', []).controller('AlgoController', ['$scope',
     function($scope, Algorithm) {
 
         $scope.tagline = 'List of algorithms';
-        console.log(Algorithm.get());
+        console.log(Algorithm.get()[0]);
 
     }
 ]);
