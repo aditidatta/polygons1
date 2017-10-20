@@ -15,12 +15,12 @@ a {
     width: 90%;
 }
 
-.home.h3 {
+.home h3 {
     display: inline-block;
     font-size: 24px;
     border-bottom: 2px solid #000000;
 }
 
-.home.span {
+.home span {
     margin-left: 10px;
 }
