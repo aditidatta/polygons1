@@ -7,6 +7,7 @@ module.exports = function(app) {
             if (err)
                 res.send(err);
             console.log('in get()');
+            console.log(algos);
             res.json(algos);
         });
     });
