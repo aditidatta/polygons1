@@ -1,5 +1,5 @@
 // public/js/services/AlgoService.js
-angular.module('AlgoService', []).factory('Algorithm', ['$http', function($http) {
+angular.module('AlgoService', []).factory('Algorithms', ['$http', function($http) {
 
     return {
         // call to get all algos
