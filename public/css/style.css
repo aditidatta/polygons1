@@ -1,4 +1,4 @@
-.page body {
+body {
     background: #403A3E;
     /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #BE5869, #403A3E);
@@ -7,11 +7,11 @@
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-.page a {
+a {
     color: #00B7FF;
 }
 
-.page.ng-view {
+.ng-view {
     background: #403A3E;
     /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #BE5869, #403A3E);
