@@ -1,0 +1,16 @@
+<!-- public/views/projects.html -->
+
+<div class="jumbotron text-center project">
+    <h1>Projects</h1>
+
+    <p>{{ tagline }}</p>
+
+    <ul>
+        <li ng-repeat="project in projectlist">
+            <a ng-href="/projects/{{project.fname}}" ng-click="nav(project.fname)">{{project.title}}</a>
+        </li>
+    </ul>
+
+    <div class="include-container" ng-include="filePath"></div>
+
+</div>
