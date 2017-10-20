@@ -6,6 +6,7 @@ angular.module('AlgoService', []).factory('Algorithm', ['$http', function($http)
         get: function() {
             l = $http.get('/api/algos');
             console.log(l);
+            console.log('hello');
             return l;
         },
 
