@@ -2,6 +2,6 @@
 angular.module('AlgoCtrl', []).controller('AlgoController', function($scope, $http, Algorithms) {
 
     $scope.tagline = 'List of algorithms';
-    //Algorithms.get()
+    Algorithms.get();
 
 });
