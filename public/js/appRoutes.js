@@ -13,6 +13,18 @@ angular.module('appRoutes', []).config(['$routeProvider', '$locationProvider', f
     .when('/algo', {
         templateUrl: 'views/algo.html',
         controller: 'AlgoController'
+    })
+
+    // algo page that will use the ResearchController
+    .when('/research', {
+        templateUrl: 'views/research.html',
+        controller: 'ResearchController'
+    })
+
+    // algo page that will use the ProjectController
+    .when('/projects', {
+        templateUrl: 'views/projects.html',
+        controller: 'ProjectController'
     });
 
     $locationProvider.html5Mode(true);
