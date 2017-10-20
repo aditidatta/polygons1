@@ -8,11 +8,15 @@ angular.module('ProjCtrl', []).controller('ProjectController', function($scope, 
     });*/
 
     $scope.projectlist = [
-        { title: 'Project 1', fname: 'proj1' },
-        { title: 'Project 2', fname: 'proj2' },
-        { title: 'Project 3', fname: 'proj3' },
-        { title: 'Project 4', fname: 'proj4' },
-        { title: 'Project 5', fname: 'proj5' }
+        { title: 'Project 1', fname: 'proj1.html' },
+        { title: 'Project 2', fname: 'proj2.html' },
+        { title: 'Project 3', fname: 'proj3.html' },
+        { title: 'Project 4', fname: 'proj4.html' },
+        { title: 'Project 5', fname: 'proj5.html' }
     ];
+
+    $scope.nav = function(path) {
+        $scope.filePath = path;
+    };
 
 });
