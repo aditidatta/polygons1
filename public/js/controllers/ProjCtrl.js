@@ -16,6 +16,7 @@ angular.module('ProjCtrl', []).controller('ProjectController', function($scope, 
     ];
 
     $scope.filePath = 'views/' + $scope.projectlist[0].fname;
+    $scope.classVar = "active";
 
     $scope.nav = function(path) {
         // console.log($scope.currentPath);
