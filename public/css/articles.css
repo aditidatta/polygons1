@@ -1,0 +1,4 @@
+.all-articles.sidebar.active {
+    color: red;
+    font-weight: bold;
+}
