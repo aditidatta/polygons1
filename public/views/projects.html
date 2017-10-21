@@ -1,16 +1,16 @@
 <!-- public/views/projects.html -->
 
-<div class="jumbotron text-center project">
+<div class="jumbotron text-center all-projects">
     <h1>Projects</h1>
 
     <p>{{ tagline }}</p>
 
     <ul>
         <li ng-repeat="project in projectlist">
-            <a href="public/views/{{project.fname}}">{{project.title}}</a>
+            <a href="#" ng-click="nav(project.fname)">{{project.title}}</a>
         </li>
     </ul>
 
-    <div class="include-container"></div>
+    <div class="include-container" ng-include="filePath"></div>
 
 </div>

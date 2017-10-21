@@ -15,9 +15,10 @@ angular.module('ProjCtrl', []).controller('ProjectController', function($scope, 
         { title: 'Project 5', fname: 'proj5.html' }
     ];
 
-    /*$scope.nav = function(path) {
+    $scope.nav = function(path) {
+        //console.log($scope.currentPath);
         console.log(path);
-        $scope.filePath = path;
-    };*/
+        $scope.filePath = 'views/'+path;
+    };
 
 });
