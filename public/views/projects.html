@@ -1,11 +1,7 @@
 <!-- public/views/projects.html -->
 
-<div class="articles">
-    <div class="jumbotron text-center">
-        <h1>Projects</h1>
-
-        <p>{{ tagline }}</p>
-    </div>
+<div class="jumbotron articles">
+    <div class="container">
     <nav class="sidebar">
         <ul>
             <li ng-repeat="project in projectlist">
@@ -14,5 +10,5 @@
         </ul>
     </nav>
     <div class="content" ng-include="filePath"></div>
-
+    </div>
 </div>

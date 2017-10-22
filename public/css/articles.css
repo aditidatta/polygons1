@@ -1,13 +1,28 @@
-.sidebar {
-    line-height: 30px;
-    background-color: #eeeeee;
-    height: 300px;
-    width: 200px;
-    float: left;
-    padding: 5px;
+.articles .container {
+    width: 100%;
 }
 
-.content {
+.articles .sidebar {
+    line-height: 30px;
+    height: auto;
+    width: 200px;
     float: left;
-    padding: 10px;
+    padding-top: 20px;
+    padding-left: 0px;
+    overflow: auto;
+    position: fixed;
+    /*border-right: 1px solid #000000*/
+}
+
+.articles ul {
+    list-style-type: circle;
+    margin: 0px;
+}
+
+.articles .content {
+    border-left: 2px solid #a0a7b2;
+    float: left;
+    width: auto;
+    margin-left: 200px;
+    padding-left: 40px;
 }
