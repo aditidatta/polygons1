@@ -7,7 +7,7 @@ angular.module('ProjCtrl', []).controller('ProjectController', function($scope, 
         //console.log('in Topics');
         $scope.projectlist = success.data;
 
-        if (!($scope.projectlist)) {
+        if (angular.equals($scope.projectlist, {})) {
             $scope.filePath = 'views/err.html';
         } else if ($rootScope.pageLink) {
             $scope.filePath = 'views/projects/' + $rootScope.pageLink;
