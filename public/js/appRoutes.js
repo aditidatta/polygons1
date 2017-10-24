@@ -28,6 +28,11 @@ angular.module('appRoutes', []).config(['$routeProvider', '$locationProvider', f
         templateUrl: 'views/projects.html',
         controller: 'ProjectController',
         css: 'css/articles.css'
+    })
+    
+    .when('/search',{
+        templateUrl: 'views/search.html',
+        controller: 'SearchController',
     });
 
     $locationProvider.html5Mode(true);

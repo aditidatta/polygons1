@@ -26,7 +26,7 @@ MongoClient.connect(url, function(err, db) {
             //console.log(arr[1]);
             if(arr.length == 4){
 	        var title = arr[0];
-                var kw = arr[1].split("-");
+                var kw = arr[1];
                 var type = arr[2];
                 var fname = arr[3];
                 data.push({

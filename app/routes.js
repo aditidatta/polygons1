@@ -5,17 +5,20 @@ module.exports = function(app) {
         Article.find(function(err, articles) {
             if (err)
                 res.send(err);
-            console.log(articles);
+            //console.log(articles);
             res.json(articles);
         });
     });
 
     app.get('/api/search', function(req, res) {
-        console.log(req.query.q);
-        Article.find(function(err, articles) {
-            if (err)
+        //console.log(req.query.q);
+        var q = req.query.q.replace(/\+/g, ' ');
+        //console.log(q);
+        Article.find({"$text":{"$search": q}},function(err, articles) {
+            if (err){
                 res.send(err);
-            console.log(articles);
+            }
+            //console.log(articles);
             res.json(articles);
         });
     });

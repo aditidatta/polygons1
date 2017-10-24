@@ -5,7 +5,7 @@ module.exports = mongoose.model('Article', {
         type: String,
         default: 'Article 1'
     },
-    keywords: [String],
+    keywords: String,
     type: String,
     fname: String
 });

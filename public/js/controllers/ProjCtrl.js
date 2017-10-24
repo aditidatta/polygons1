@@ -15,13 +15,13 @@ angular.module('ProjCtrl', []).controller('ProjectController', function($scope, 
         { title: 'Project 5....', fname: 'proj5.html' }
     ];
 
-    $scope.filePath = 'views/' + $scope.projectlist[0].fname;
+    $scope.filePath = 'views/projects/' + $scope.projectlist[0].fname;
     //$scope.classVar = "active";
 
     $scope.nav = function(path) {
         // console.log($scope.currentPath);
         // console.log(path);
-        $scope.filePath = 'views/' + path;
+        $scope.filePath = 'views/projects/' + path;
         //$scope.classVar = "active";
     };
 
