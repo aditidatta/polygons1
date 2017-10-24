@@ -2,9 +2,9 @@ var Article = require('./models/article');
 
 module.exports = function(app) {
     app.get('/api/articles', function(req, res) {
-        var q = req.query;
-        console.log(q);
-        Article.find(function(err, articles) {
+        //var q = req.query;
+        //console.log(q);
+        Article.find({ 'type': req.query.type }, function(err, articles) {
             if (err)
                 res.send(err);
             //console.log(articles);
