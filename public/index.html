@@ -42,13 +42,13 @@
             <li><a ui-sref="algo" ui-sref-active="active">Algorithms</a></li>
             <li><a ui-sref="research" ui-sref-active="active">Research</a></li>
             <li><a ui-sref="projects" ui-sref-active="active">Projects</a></li>-->
-                <li class="nav-item active"><a href="/">Home</a></li>
-                <li class="nav-item"><a href="/topics">CS Topics</a></li>
-                <li class="nav-item"><a href="/research">Research</a></li>
-                <li class="nav-item"><a href="/projects">Projects</a></li>
+                <li><a href="/">Home</a></li>
+                <li><a href="/topics">CS Topics</a></li>
+                <li><a href="/research">Research</a></li>
+                <li><a href="/projects">Projects</a></li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search" ng-model="formData">
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit" ng-click="search()">Search</button>
             </form>
         </nav>
