@@ -1,14 +1,8 @@
-<!-- public/views/topics.html -->
+<!-- public/views/algo.html -->
 
-<div class="jumbotron articles">
-    <div class="container">
-        <nav class="sidebar">
-            <ul>
-                <li ng-repeat="topic in topiclist">
-                    <a href="#" ng-click="nav(topic.fname)">{{topic.title}}</a>
-                </li>
-            </ul>
-        </nav>
-        <div class="content" ng-include="filePath"></div>
-    </div>
+<div class="jumbotron text-center">
+    <h1>CS Topics</h1>
+
+    <p>{{ tagline }}</p>
+
 </div>
