@@ -10,10 +10,10 @@ angular.module('appRoutes', []).config(['$routeProvider', '$locationProvider', f
         css: 'css/views.css'
     })
 
-    // algo page that will use the AlgoController
-    .when('/algo', {
-        templateUrl: 'views/algo.html',
-        controller: 'AlgoController',
+    // topics page that will use the AlgoController
+    .when('/topics', {
+        templateUrl: 'views/topics.html',
+        controller: 'TopicController',
         css: 'css/articles.css'
     })
 

@@ -1,5 +1,5 @@
 // public/js/controllers/ProjCtrl.js
-angular.module('ProjCtrl', []).controller('ProjectController', function($scope, $http, Algorithms) {
+angular.module('ProjCtrl', []).controller('ProjectController', function($scope, $http, Articles) {
 
     $scope.tagline = 'List of projects';
     /*Algorithms.get().then(function(success) {
@@ -16,13 +16,13 @@ angular.module('ProjCtrl', []).controller('ProjectController', function($scope, 
     ];
 
     $scope.filePath = 'views/' + $scope.projectlist[0].fname;
-    $scope.classVar = "active";
+    //$scope.classVar = "active";
 
     $scope.nav = function(path) {
         // console.log($scope.currentPath);
         // console.log(path);
         $scope.filePath = 'views/' + path;
-        $scope.classVar = "active";
+        //$scope.classVar = "active";
     };
 
 });

@@ -1,0 +1,20 @@
+<h1>What is Load Factor?</h1>
+
+<p>We all know the time complexity of search, insert, deletion in a HashMap is <code>O(1)</code>. Most of us Probably also know how it works. If you don't, then you can learn about <a href="https://en.wikipedia.org/wiki/Hash_table">HashMap from this article</a>.
+    When we try to insert or search a specific key in a hash map, the key is first converted to a hash code and then hashed by a function, which finds out the location in the data structure. So for example, I have two keys with hash codes 159 and 190,
+    and then I have a simple hash function <code>index = hashcode % 31</code>. So what results do we get for those two keys? 4 and 4. So they end up at the same location in the data structure. That's a collision. If we now don't handle the collision,
+    a key is going to overwrite the other. There are different ways of handling a collision, like separate chaining, linear probing(using buckets), etc.
+</p>
+<p>In Java, they use an array of buckets. What is a bucket? It's a list where you can store multiple keys which collide with each other. So what happens if we start to have too many collisions? We will end up with multiple keys in the same buckets. Is it
+    a bad thing? Yes. Because when you try search for a key, the hash function spots the bucket where it might be stored, then program has to go through the list or the bucket to find the key, which is not a good thing if you have too many items in the
+    bucket, the time complexity will no longer be <code>O(n)</code>. To prevent it we try to write a hash funcion which is as optimal as possible.
+</p>
+<p>So let's take a scenario, where the hashmap has <code>16</code> buckets, and you are trying to insert <code>16000</code> elements. In this case, even if you have an optimal hash function, there will be at least <code>1000</code> elements in a bucket.
+    To handle this, we use a <code>load factor</code> for the hash map. In Java, the load factor is <code>0.75</code> by default. So while inserting elements if the data structure becomes <code>75%</code> full, then it will increase the number of buckets
+    (by default, Java doubles the size), and rehash the existing keys with a second hash function to redistribute the keys over the new data structure. So, if the initial size is 16, then <code>16 x 0.75 = 12</code>, after <code>12</code> elements it's
+    going to rehash.
+</p>
+<p>So what is the cost of this operation? Each time when we rehash, we double the size, so when the last rehash will be performed, there will be <code>N = (K*0.75)</code> elements. Here, <code>N</code> is the number of elements, <code>K</code> is the number
+    of buckets. In the previous rehash, we had to rehash <code>N/2</code> times, before that we had to rehash <code>N/4</code> times and so on. Then the total number of rehashing is <code>N(1 + 1/2 + 1/4 + ...) = 2N</code>. So the time complexity is <code>O(N)</code>.
+    So to prevent this, it's better to start with a larger capacity if we know <code>N</code> is going to be large.
+</p>

@@ -5,7 +5,7 @@
 .articles .sidebar {
     line-height: 30px;
     height: auto;
-    width: 200px;
+    width: 250px;
     float: left;
     padding-top: 20px;
     padding-left: 0px;
@@ -20,9 +20,9 @@
 }
 
 .articles .content {
-    border-left: 2px solid #a0a7b2;
+    border-left: 1px solid #a4b0c4;
     float: left;
     width: auto;
-    margin-left: 200px;
-    padding-left: 40px;
+    margin-left: 250px;
+    padding-left: 20px;
 }
