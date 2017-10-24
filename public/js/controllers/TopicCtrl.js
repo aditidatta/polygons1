@@ -6,7 +6,9 @@ angular.module('TopicCtrl', []).controller('TopicController', function($scope, $
     Articles.get('type=topic').then(function(success) {
         //console.log('in Topics');
         $scope.topiclist = success.data;
-        if ($rootScope.pageLink) {
+        if (!($scope.topiclist)) {
+            $scope.filePath = 'views/err.html';
+        } else if ($rootScope.pageLink) {
             $scope.filePath = 'views/topics/' + $rootScope.pageLink;
             $rootScope.pageLink = null;
         } else {

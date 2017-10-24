@@ -6,7 +6,10 @@ angular.module('ProjCtrl', []).controller('ProjectController', function($scope, 
     Articles.get('type=project').then(function(success) {
         //console.log('in Topics');
         $scope.projectlist = success.data;
-        if ($rootScope.pageLink) {
+
+        if (!($scope.projectlist)) {
+            $scope.filePath = 'views/err.html';
+        } else if ($rootScope.pageLink) {
             $scope.filePath = 'views/projects/' + $rootScope.pageLink;
             $rootScope.pageLink = null;
         } else {
