@@ -1,22 +1,18 @@
 // public/js/controllers/ProjCtrl.js
-angular.module('ProjCtrl', []).controller('ProjectController', function($scope, $http, Articles) {
+angular.module('ProjCtrl', []).controller('ProjectController', function($scope, $rootScope, $location, $http, Articles) {
 
-    $scope.tagline = 'List of projects';
-    /*Algorithms.get().then(function(success) {
-        console.log('in project');
-        console.log(success.data);
-    });*/
+    //$scope.tagline = 'List of articles';
 
-    $scope.projectlist = [
-        { title: 'Project 1 ........', fname: 'proj1.html' },
-        { title: 'Project 2...........', fname: 'proj2.html' },
-        { title: 'Project 3.....', fname: 'proj3.html' },
-        { title: 'Project 4..............', fname: 'proj4.html' },
-        { title: 'Project 5....', fname: 'proj5.html' }
-    ];
-
-    $scope.filePath = 'views/projects/' + $scope.projectlist[0].fname;
-    //$scope.classVar = "active";
+    Articles.get('type=project').then(function(success) {
+        //console.log('in Topics');
+        $scope.projectlist = success.data;
+        if ($rootScope.pageLink) {
+            $scope.filePath = 'views/projects/' + $rootScope.pageLink;
+            $rootScope.pageLink = null;
+        } else {
+            $scope.filePath = 'views/projects/' + $scope.projectlist[0].fname;
+        }
+    });
 
     $scope.nav = function(path) {
         // console.log($scope.currentPath);

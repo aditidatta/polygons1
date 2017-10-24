@@ -3,8 +3,8 @@ angular.module('ArticleService', []).factory('Articles', ['$http', function($htt
 
     return {
         // call to get all articles
-        get: function() {
-            return $http.get('/api/articles');
+        get: function(query) {
+            return $http.get('/api/articles?' + query);
         },
 
         // these will work when more API routes are defined on the Node side of things

@@ -2,6 +2,8 @@ var Article = require('./models/article');
 
 module.exports = function(app) {
     app.get('/api/articles', function(req, res) {
+        var q = req.query;
+        console.log(q);
         Article.find(function(err, articles) {
             if (err)
                 res.send(err);
@@ -14,8 +16,8 @@ module.exports = function(app) {
         //console.log(req.query.q);
         var q = req.query.q.replace(/\+/g, ' ');
         //console.log(q);
-        Article.find({"$text":{"$search": q}},function(err, articles) {
-            if (err){
+        Article.find({ "$text": { "$search": q } }, function(err, articles) {
+            if (err) {
                 res.send(err);
             }
             //console.log(articles);
