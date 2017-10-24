@@ -21,20 +21,23 @@ MongoClient.connect(url, function(err, db) {
         }
         var data = [];
         var lines = content.split('\n');
-        for (var i = 0; i < lines.length(); i++) {
-            var arr = line.split(", ");
-            var title = arr[0];
-            var kw = arr[1].split("-");
-            var type = arr[2];
-            var fname = arr[3];
-            data.push({
-                "title": title,
-                "keywords": kw,
-                "type": type,
-                "fname": fname
-            });
+        for (var i = 0; i < lines.length; i++) {
+            var arr = lines[i].split(", ");
+            //console.log(arr[1]);
+            if(arr.length == 4){
+	        var title = arr[0];
+                var kw = arr[1].split("-");
+                var type = arr[2];
+                var fname = arr[3];
+                data.push({
+                    "title": title,
+                    "keywords": kw,
+                    "type": type,
+                    "fname": fname
+                });
+            }
         }
-        insertDocuments(db, data, function() {
+        insertDocuments(db, data, data.length, function() {
             db.close();
             console.log("connection closed..");
         });
