@@ -2,16 +2,41 @@ var MongoClient = require('mongodb').MongoClient;
 var assert = require('assert');
 var ObjectId = require('mongodb').ObjectID;
 var url = 'mongodb://localhost/polygons1';
+var fs = require('fs');
 
-var insertDocument = function(db, title, kw, type, fname, callback) {
-    db.collection('articles').insertOne({
-        "title": title,
-        "keywords": kw,
-        "type": type,
-        "fname": fname
-    }, function(err, result) {
-        assert.equal(err, null);
-        console.log("Inserted a document into the restaurants collection.");
+var insertDocuments = function(db, data, count, callback) {
+    db.collection('articles').insertMany(data).then(function(result) {
+        assert.equal(count, result.insertedCount);
+        console.log("Insert: Done..");
         callback();
     });
 };
+
+
+MongoClient.connect(url, function(err, db) {
+    fs.readFile('test.txt', 'utf-8', function(err, content) {
+        if (err) {
+            throw err;
+            return;
+        }
+        var data = [];
+        var lines = content.split('\n');
+        for (var i = 0; i < lines.length(); i++) {
+            var arr = line.split(", ");
+            var title = arr[0];
+            var kw = arr[1].split("-");
+            var type = arr[2];
+            var fname = arr[3];
+            data.push({
+                "title": title,
+                "keywords": kw,
+                "type": type,
+                "fname": fname
+            });
+        }
+        insertDocuments(db, data, function() {
+            db.close();
+            console.log("connection closed..");
+        });
+    });
+});
