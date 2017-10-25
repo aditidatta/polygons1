@@ -1,3 +1,35 @@
-<h2>HashMaps vs Hashtables vs ConcurrentHashMaps</h2>
+<h1>HashMaps vs Hashtables vs ConcurrentHashMaps</h1>
 
-<p></p>
+<p>
+	<i>So what is the difference between HashMap and Hashtable? </i>My students often ask me this question and I understand it can be confusing sometimes, because Java has so many implementation of hash maps. So I thought I would talk about it here.
+</p>
+<p>
+	In short, Hashtable is thread safe, and HashMap is not. So if you have a program which has multiple threads accessing a map, you should consider Hashtable over HashMap (soon we will see that we have other options too). <i>So what do you mean by thread-safe? </i> Let's take a moment to talk about that.
+</p>
+<p>
+	In a multi-threaded application it's very hard to say when exactly it's goint to fail. But let's say we have an application where a thread is performing a <code>get()</code> operation and another thread is doing a <code>put()</code>. Now let's say that <code>put()</code> operation is going to cause a rehash of the map, that means all the keys are going to be mapped to different buckets now. So what happens to the thread which was looking for a key in a bucket. The key may or may not be in the bucket and the <code>get()</code> operation may return null even though the key is there is the map. <i>So why would that happen?</i> It would happen because <i>HashMap</i> is not synchronized by default. The computer doesn't know the relation between the jobs that the put() has to be finished before get() can access it.   
+</p>
+<p>
+	<i>So what does Hashtable do to solve the problem?</i> Well, all the accessor methods in the <code>Hashtable</code> are <code>synchronized</code>, that means when a thread tries to access a method it acquires a lock on the whole map. So no two threads are accessing the map at the same time so no more inconsistancy in its state. But there are some disadvantages of this method: 
+	<ul>
+	<li>For some operations like iteration it still requires external synchronization.</li>
+	<li>Locks the whole object, so all the other threads have to wait even if they need to access different keys at that moment. </li>
+	</ul> 
+	There is another alternative <code>Collections.synchronizedMap().</code> This method can be used to synchronize any <code>Map<K,V></code> object. The method return an object of <code>SynchronizedMap</code> which is just a wrapper for the underlying map object. Although, it acts in a very similar way to Hashtable, the only difference is that it uses <code>synchronized block.</code> If only the map object is passed to the method then it creates a mutex on the map object, and if another object is passed to the method along with the map object then it creates a lock on the other object, not the map. 
+
+	Also, if a thread creates an Iterator and while iterating, if another tries to modify the structure of the map, a <code>ConcurrentModificationException</code> will be thrown in both of these synchronized maps. 
+</p>
+<p>
+	Now, to solve all of these problems, we have to use <code>ConcurrentHashMap.</code> <i>So how is it different from the others?</i> Answer: it divides the whole data structure into small segments and creates locks on those segments. As the whole structure is never locked, multiple threads can access the map at the same time. Also, it doesn't throw a <code>ConcurrentModificationException</code> when a thread is iterating over it and another is modifying it.
+</p>
+<p>
+	ConcurrentHashMap should only be used when you need high level of concurrency. Otherwise, HashMap is fine when you have threads which are just reading from the map and not modifying it.
+</p>
+<h2>Check out these articles for more details:</h2>
+<div>
+	<ul>
+		<li>https://www.ibm.com/developerworks/java/library/j-jtp03304/</li>
+		<li>http://jeremymanson.blogspot.com/2008/07/immutability-in-java-part-2.html</li>
+		<li>https://www.ibm.com/developerworks/library/j-hashmap/index.html</li>
+	</ul>
+</div> 

@@ -6,8 +6,8 @@ angular.module('appRoutes', []).config(['$routeProvider', '$locationProvider', f
     // home page
         .when('/', {
         templateUrl: 'views/home.html',
-        controller: 'MainController',
-        css: 'css/views.css'
+        controller: 'MainController'
+            //css: 'css/views.css'
     })
 
     // topics page that will use the AlgoController
@@ -29,8 +29,8 @@ angular.module('appRoutes', []).config(['$routeProvider', '$locationProvider', f
         controller: 'ProjectController',
         css: 'css/articles.css'
     })
-    
-    .when('/search',{
+
+    .when('/search', {
         templateUrl: 'views/search.html',
         controller: 'SearchController',
     });
