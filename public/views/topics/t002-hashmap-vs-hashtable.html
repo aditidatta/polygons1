@@ -11,10 +11,14 @@
 </p>
 <p>
 	<i>So what does Hashtable do to solve the problem?</i> Well, all the accessor methods in the <code>Hashtable</code> are <code>synchronized</code>, that means when a thread tries to access a method it acquires a lock on the whole map. So no two threads are accessing the map at the same time so no more inconsistancy in its state. But there are some disadvantages of this method: 
+	<div>
 	<ul>
 	<li>For some operations like iteration it still requires external synchronization.</li>
 	<li>Locks the whole object, so all the other threads have to wait even if they need to access different keys at that moment. </li>
-	</ul> 
+	</ul>
+	</div>
+</p>
+<p> 
 	There is another alternative <code>Collections.synchronizedMap().</code> This method can be used to synchronize any <code>Map<K,V></code> object. The method return an object of <code>SynchronizedMap</code> which is just a wrapper for the underlying map object. Although, it acts in a very similar way to Hashtable, the only difference is that it uses <code>synchronized block.</code> If only the map object is passed to the method then it creates a mutex on the map object, and if another object is passed to the method along with the map object then it creates a lock on the other object, not the map. 
 
 	Also, if a thread creates an Iterator and while iterating, if another tries to modify the structure of the map, a <code>ConcurrentModificationException</code> will be thrown in both of these synchronized maps. 
