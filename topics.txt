@@ -3,7 +3,7 @@ lambdas, python java lambda lambdas interface functional programming comparator 
 HashMaps vs Hashtables vs ConcurrentHashMaps, java multiple threads thread multithreading multi-threading hashmap hashtable concurrenthashmap concurrency concurrent hash map table rehash rehashing, topics, t002-hashmap-vs-hashtable.html
 Java Tips and Tricks, arrays list arraylist array primitive collectors intstream stream boxed boxed() time complexity integer, topics, t004-java-tips.html
 Python Tips and Tricks, python tips tricks, topics, t005-python-tips.html
-Hash, some salt and passwords, sha-1 sha-2 sha-3 sha md5 hash function cryptography passwords password unique salt database data base, topics, t006-hash-password.html
+Hash some salt and passwords, sha-1 sha-2 sha-3 sha md5 hash function cryptography passwords password unique salt database data base, topics, t006-hash-password.html
 Python map() and filter(), python map filter reduce lambda lambdas, topics, t007-python-map-filter.html
 Java Streams, map, filter and reduce, java map filter reduce lambda lambdas, topics, t008-stream-map-java.html
 Pointers in C, pointers pointer memory address c, topics, t009-pointers-c.html
@@ -13,7 +13,7 @@ Java monitors, java thread multiple threads multithreading multi-threading monit
 C and Dynamic Memory Allocation, malloc calloc realloc free dynamin memory run-time run time pointer pointers c, topics, t013-dynamic-memory.html
 Mutex and Semaphores, mutex semaphore lock locks, topics, t014-mutex-semaphore.html
 Tim Sort, tim sort quick dual pivot merge, topics, t015-tim-sort.html
-BFS, DFS, A-star, graph graphs search tree breadth depth first search bfs dfs a star a-star path finding path-search path-finding, topics, t016-bfs-dfs.html
+BFS DFS A-star, graph graphs search tree breadth depth first search bfs dfs a star a-star path finding path-search path-finding, topics, t016-bfs-dfs.html
 Augmented Binary Search Tree, binary search tree augmented, topics, t017-bst.html
 Self-balancing BST, avl red black self balance balancing binary search tree, topics, t018-self-balance-bst.html
 Bloom Filters, hash funstion map hashmap bloom filter, topics, t019-bloom-filter.html
