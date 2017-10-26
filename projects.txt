@@ -1,0 +1,12 @@
+Cars API for Craigslist, api crawler crawling scraper scraping scrape project parse parser parsing query queryapi craigslist cars mysql rdbms joins index indexes cache redis jackson maven jpa spring hibernate mvc boot java junit tomcat server digital ocean, project, proj001-cars-api.html
+Watch out, django python google maps api mongodb nosql spotcrime crime project alerts jquery html css js, project, proj002-watch-out.html
+This website, angular angularjs express expressjs node nodejs mongodb mongo mean digital ocean project api server multikey full text search full-text, project, proj003-polygons.html
+Text mining app for Android, text mining java android app project, project, proj004-text-mining-android-app.html
+Ice Hockey 2D, ice hockey 2d mario old game physics engine controller project java classes class object objects sprite sprites polymorphism inheritance, project, proj005-ice-hockey.html
+Catering Menu Services, catering menu mysql rdbms school project java jsp jdbc servlet cookies cookie html css, project, proj006-catering-menu-services.html
+Airport Simulator, java, project, proj007-airport-simulator.html
+A hadr-to-beat AI for Tic Tac Toe, java tic-tac-toe ai mini max mini-max ai, project, proj008-tic-tac-toe-mini-max.html
+My ORM, java hashmap hash map tree map treemap reflection orm object relational, project, proj009-my-orm.html
+Dungeon game, dungeon game java class classes object objects inheritence polymorphism, project, proj010-dungeon-java.html
+Blackhole Simulator, python gui black hole blackhole black-hole classes objectes class object inheritence super super-class super sub sub-class polymorphism, project, proj011-blackhole-sim-py.html
+Again, the computer wins, rock paper scissor ai pattern recog recognition compuer wins, project, proj012-pattern-recog-rock-paper-scissor.html

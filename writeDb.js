@@ -14,7 +14,7 @@ var insertDocuments = function(db, data, count, callback) {
 
 
 MongoClient.connect(url, function(err, db) {
-    fs.readFile('test.txt', 'utf-8', function(err, content) {
+    fs.readFile('topics.txt', 'utf-8', function(err, content) {
         if (err) {
             throw err;
             return;

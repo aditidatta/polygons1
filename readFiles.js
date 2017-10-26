@@ -25,7 +25,7 @@ readFiles('public/views/topics/', function(fname, content) {
         return str.replace(/<\/?h1>/g, '');
     });
     var res = title[0] + ', , topic, ' + fname + '\n';
-    fs.appendFile('test.txt', res, function(err) {
+    fs.appendFile('topics.txt', res, function(err) {
         if (err) throw err;
         console.log('Saved!');
     });
