@@ -3,7 +3,7 @@ angular.module('ProjCtrl', []).controller('ProjectController', function($scope, 
 
     //$scope.tagline = 'List of articles';
 
-    Articles.get('type=project').then(function(success) {
+    Articles.get('type=projects').then(function(success) {
         //console.log('in Topics');
         $scope.projectlist = success.data;
 

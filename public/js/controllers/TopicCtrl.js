@@ -3,7 +3,7 @@ angular.module('TopicCtrl', []).controller('TopicController', function($scope, $
 
     //$scope.tagline = 'List of articles';
 
-    Articles.get('type=topic').then(function(success) {
+    Articles.get('type=topics').then(function(success) {
         //console.log('in Topics');
         $scope.topiclist = success.data;
         if (angular.equals($scope.topiclist, {})) {
