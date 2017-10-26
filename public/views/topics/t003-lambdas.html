@@ -1,3 +1,96 @@
 <h1>lambdas</h1>
 
-<p></p>
+<p>Lambdas are one of those things which are very confusing at first but once you get it you will see how cool it is. Lambdas are basically functions, more appropriately anonymous functions. They don't belong to any specific class and can be passed around like objects. Here I am going to show how to write <code>lambdas in Java and Python</code>. The same concept is shared by many other languages like <code>Javascript, C++, C#, Swift.</code>
+</p>
+
+<h2>Lambdas in Python</h2>
+<p>
+	In Python, if we have to write a function that takes two numbers and returns the summation of those two numbers this is how we will do it:
+	<pre class="prettyprint">
+		<code class="language-py">
+			def add(a=0, b=0):
+				return a+b
+
+			>> add(4,5)
+			>> 9
+		</code>
+	</pre>
+</p>
+<p>
+	How do we implement the same with lambdas?
+	<pre class="prettyprint">
+		<code class="language-py">
+			add = lambda x,y : x+y
+
+			>> add(4,5)
+			>> 9
+		</code>
+	</pre>
+	So the format is <code>lambda <params> : <operations>.</code> In this example <code>x</code>, <code>y</code> are the parameters and <code>x+y</code> is the operation that the function performs. So when I called the lambda <code>add(4,5)</code> 4 and 5 are assigned to x and y, then the function performs the job and automatically returns the value. Note that we don't to use <code>return</code> keyword.
+</p>
+<p>
+	Now let's say I need to write a method that filters out elements from a list based of a condition. I may want to use different conditions to filter different lists. So will write different methods for diferent conditions? Absolutely not. Because they are doing the same thing, just the condition part is different. So here we can use lambdas to supply the conditions to the function that's going to actually filter. Here's an example:
+
+	<pre class="prettyprint">
+		<code class="language-py">
+			def filter(condition, l=[]):
+    			if not l:
+        			return l
+    			else:
+    				# for each element in list if the condition is true
+    				# then, put it to the new list
+        			l1 = [x for x in l if condition(x)]
+        			return l1
+
+			>> filter(lambda x : x > 10, [12, 9, 23, 3, 4, 6, 21, 67])
+			>> [12, 23, 21, 67]
+
+			>> filter(lambda x : x < 10, [12, 9, 23, 3, 4, 6, 21, 67])
+			>> [9, 3, 4, 6]
+		</code>
+	</pre>
+
+	Note that the line 7 could be broken down like this:
+
+	<pre class="prettyprint">
+		<code class="language-py">
+		l1 = []
+		for x in l:
+			if condition(x):
+				l1.append(x)
+		</code>
+	</pre>
+</p>
+
+<h2>Lambdas in Java</h2>
+<p>
+	Let's start with the syntax. It's a little different from lambdas in Python. So here, you don't need to use the lambdas keyword in front of the definition and you will also need an <code>interface</code>. Because in Java, lambdas are mainly used to replace anonymous classes with this simple inline implementation of the functional interfaces. So if you write a lambda function in Java it will look like this:
+
+	<pre class="prettyprint">
+		<code class="language-java">
+			class SomeClass{
+				...
+				...
+				List<Person> listOfPersons; 
+				// some list, Person objects are added at some point later
+				...
+				void sort(){
+					Comparator<Person> nameComparator = 
+						(p1, p2) -> p1.getName().compareTo(p2.getName());
+					
+					// Note that we don't need to mention types for p1 and p2
+					
+					listOfPersons.sort(nameComparator); 
+				}
+			}
+		</code>
+	</pre>
+</p>
+<p>
+	It can also be used with <code>.forEach()</code>
+	<pre class="prettyprint">
+		<code class="language-java">
+			listOfPersons.forEach((p)->System.out.println(p));
+		</code>
+	</pre>
+</p>
