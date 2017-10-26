@@ -1,17 +1,19 @@
 .articles .container {
+    position: relative;
     width: 100%;
 }
 
 .articles .sidebar {
     line-height: 30px;
-    height: auto;
+    top: 20px;
+    bottom: 20px;
     width: 250px;
     float: left;
     padding-top: 20px;
     padding-left: 0px;
-    overflow: auto;
-    position: fixed;
+    position: absolute;
     /*border-right: 1px solid #000000*/
+    overflow: auto;
 }
 
 .articles ul {
@@ -21,8 +23,7 @@
 
 .articles .content {
     border-left: 1px solid #a4b0c4;
-    float: left;
-    width: auto;
+    float: none;
     margin-left: 250px;
     padding-left: 20px;
 }
