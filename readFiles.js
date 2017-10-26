@@ -1,4 +1,6 @@
 var fs = require('fs');
+var path = require('path');
+var filename = path.basename(__filename);
 
 function readFiles(dir, processContent, onError) {
     fs.readdir(dir, function(err, fnames) {
@@ -19,13 +21,18 @@ function readFiles(dir, processContent, onError) {
     });
 }
 
-readFiles('public/views/topics/', function(fname, content) {
+if (process.argv.length < 3){
+    console.log("The format must be \'node "+filename+" <folder>\' and the folder should be under /public/views/");
+    process.exit(1);    
+}
+
+readFiles('public/views/'+process.argv[2]+'/', function(fname, content) {
     //console.log(content);
     var title = content.match(/<h1>(.*?)<\/h1>/g).map(function(str) {
         return str.replace(/<\/?h1>/g, '');
     });
-    var res = title[0] + ', , topic, ' + fname + '\n';
-    fs.appendFile('topics.txt', res, function(err) {
+    var res = title[0] + ', , '+process.argv[2]+', ' + fname + '\n';
+    fs.appendFile(process.argv[2]+'.txt', res, function(err) {
         if (err) throw err;
         console.log('Saved!');
     });
@@ -33,17 +40,3 @@ readFiles('public/views/topics/', function(fname, content) {
     throw err;
 });
 
-/*
-console.log(arr);
-
-function writeToFile(fname, data) {
-    fs.writeFile(fname, data, function(err) {
-        if (err) {
-            return console.log(err);
-        }
-        console.log("The file was saved!");
-    });
-}
-
-writeToFile("text.txt", arr);
-*/

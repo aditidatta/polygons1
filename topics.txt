@@ -1,29 +1,30 @@
-What is Load Factor?, load factor hash map hasmap hashmaps rehash rehashing time complexity, topic, t001-load-factor.html
-HashMaps vs Hashtables vs ConcurrentHashMaps, hash map hashmap hashmaps hash table hashtable concurrent concurrency concurrenthashmap threads thread multiple multi-thread multi thread multithread, topic, t002-hashmap-vs-hashtable.html
-lambdas, lambdas lambda java python, topic, t003-lambdas.html
-Java Tips and Tricks, java tips and tricks interface interfaces list arraylist linkedlist hashmap array arrays arraystream stream string stringbuilder, topic, t004-java-tips.html
-Python Tips and Tricks, python map filter lambdas lambda list comprehension comprehensions inline, topic, t005-python-tips.html
-Hash, some salt and passwords, database salt password hash function sha sha-1 sha-2 sha-3 md5, topic, t006-hash-password.html
-map() and filter(), python map filter lambdas lambda, topic, t007-python-map-filter.html
-Pointers in C, pointers memory address dangling pointer, topic, t008-pointers-c.html
-Knuth Morris Pratt - Pattern Searching, , topic, t009-kmp-pattern.html
-Java monitors, , topic, t010-monitors.html
-Green Threads, , topic, t011-green-threads.html
-C and Dynamic Memory Allocation, , topic, t012-dynamic-memory.html
-Tim Sort, , topic, t014-tim-sort.html
-BFS, DFS, A-star, , topic, t015-bfs-dfs.html
-Augmented Binary Search Tree, , topic, t015-bst.html
-Self-balancing BST, , topic, t016-self-balance-bst.html
-Bloom Filters, , topic, t017-bloom-filter.html
-Treaps, , topic, t018-treaps.html
-Prefix Sum and Fenwick Tree, , topic, t019-prefix-sum-fenwick.html
-Genetic Algorithm, , topic, t020-genetic-algo.html
-B-Trees, b-trees b-tree b tree database index, topic, t021-b-trees.html
-Database Indexes and SQL Explain, dbms mysql index hashmap b-trees b tree trees compound explain composite, topic, t022-database-index.html
-A jar full of Cookies, http cookies cache client-side client side caching etl max-age max age, topic, t023-http-cookies.html
-HTTP and Chunked Transfer Protocol, http chunk chunked transfer protocol , topic, t024-http-chunk-transfer.html
-Caching Strategies, cache web caching strategies max-age max age etl cookies client-side client side server-side server side redis memcached varnish, topic, t025-caching-strategies.html
-Web Sockets, web socket sockets client server c tcp ip udp, topic, t026-web-sockets.html
-Stack vs Heap, stack heap dynamic memory allocation pointer c, topic, t027-stack-heap.html
-Read / Write locks, file read write lock starving readers writers reader writer, topic, t028-read-write-locks.html
-Mutex and Semaphores, mutex mutual exclusion semaphore lock locks shared memory c, topic, t013-mutex-semaphore.html
+What is Load Factor?, load factor java loadfactor load-factor rehash hash map hashmap rehashing time complexity, topics, t001-load-factor.html
+lambdas, python java lambda lambdas interface functional programming comparator anonymous class classes functions function, topics, t003-lambdas.html
+HashMaps vs Hashtables vs ConcurrentHashMaps, java multiple threads thread multithreading multi-threading hashmap hashtable concurrenthashmap concurrency concurrent hash map table rehash rehashing, topics, t002-hashmap-vs-hashtable.html
+Java Tips and Tricks, arrays list arraylist array primitive collectors intstream stream boxed boxed() time complexity integer, topics, t004-java-tips.html
+Python Tips and Tricks, python tips tricks, topics, t005-python-tips.html
+Hash, some salt and passwords, sha-1 sha-2 sha-3 sha md5 hash function cryptography passwords password unique salt database data base, topics, t006-hash-password.html
+Python map() and filter(), python map filter reduce lambda lambdas, topics, t007-python-map-filter.html
+Java Streams, map, filter and reduce, java map filter reduce lambda lambdas, topics, t008-stream-map-java.html
+Pointers in C, pointers pointer memory address c, topics, t009-pointers-c.html
+Knuth Morris Pratt - Pattern Searching, string matching pattern match time complexity analysis, topics, t010-kmp-pattern.html
+Green Threads, java green thread multiple threads multithreading multi-threading, topics, t012-green-threads.html
+Java monitors, java thread multiple threads multithreading multi-threading monitor monitors condition conditions variables, topics, t011-monitors.html
+C and Dynamic Memory Allocation, malloc calloc realloc free dynamin memory run-time run time pointer pointers c, topics, t013-dynamic-memory.html
+Mutex and Semaphores, mutex semaphore lock locks, topics, t014-mutex-semaphore.html
+Tim Sort, tim sort quick dual pivot merge, topics, t015-tim-sort.html
+BFS, DFS, A-star, graph graphs search tree breadth depth first search bfs dfs a star a-star path finding path-search path-finding, topics, t016-bfs-dfs.html
+Augmented Binary Search Tree, binary search tree augmented, topics, t017-bst.html
+Self-balancing BST, avl red black self balance balancing binary search tree, topics, t018-self-balance-bst.html
+Bloom Filters, hash funstion map hashmap bloom filter, topics, t019-bloom-filter.html
+Treaps, treap treaps binary search tree, topics, t020-treaps.html
+Prefix Sum and Fenwick Tree, prefix sum fenwick tree binary search tree, topics, t021-prefix-sum-fenwick.html
+Genetic Algorithm, genetic algorithm, topics, t022-genetic-algo.html
+B-Trees, b trees b-tree b-trees, topics, t023-b-trees.html
+Database Indexes and SQL Explain, composite compound index indexes indices b-trees b tree trees sql explain, topics, t024-database-index.html
+A jar full of Cookies, http cookies cache caching, topics, t025-http-cookies.html
+HTTP and Chunked Transfer Protocol, http chunked transfer protocol, topics, t026-http-chunk-transfer.html
+Caching Strategies, cache caching web, topics, t027-caching-strategies.html
+Web Sockets, web socket sockets tcp ip udp, topics, t028-web-sockets.html
+Stack vs Heap, stack heap c java dynamic memory, topics, t029-stack-heap.html
+Read / Write locks, file read write lock locks reader writer starve starving, topics, t030-read-write-locks.html
