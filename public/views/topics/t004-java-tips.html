@@ -1,9 +1,9 @@
 <h1>Java Tips and Tricks</h1>
 
-<h2>1) Alternative of Arrays.asList(T... a) for primitive type arrays </h2>
+<h2>1) Arrays.asList(T... a) like method for primitive type arrays </h2>
 <p>
-    You may think it creates a <code>List</code> and copies all the elements from the array to the list. But that's <code>not</code> the case. It just creates a wrapper around the array, no iteration or copies are performed. But it doesn't work with primitive
-    type arrays. If an <code>int[]</code> is sent it will just create a <code>List<int[]></code> object, i.e. the whole array as an element in the list. So what can we do to acheive the same with primitive type arrays? Here's what we can do:
+    You may think Arrays.asList(T... a) creates a <code>List</code> creates a wrapper around a regular array <code>a[]</code> so that the array can be used as a list with different methods in java collections. Here, no iteration or copies are performed. So the time complexity is <code>O(1)</code>. But it doesn't work with the primitive
+    type arrays. If an <code>int[]</code> is sent, it will just create a <code>List&ltint[]&gt</code> object, i.e. the whole array as an element in the list. So what can we do to acheive the same with primitive type arrays? Here's what we can do:
 </p>
 <code data-gist-id="8024d58004072c349c730c9d2ce0ecf3" gist-enable-cache="true"></code>
 <p>
@@ -11,7 +11,7 @@
 </p>
 <code data-gist-id="1edb7b85ae084cb3979f9614e6a2a223" gist-enable-cache="true"></code>
 <p>
-    But there's a difference between these two methods. The 1st one just creates a wrapper, so there no copy. But in the 2nd method theres a copy operation going on underneath. You can test it by modifying <code>a[]</code>. You will see that <code>list</code>    object from the 2nd method will stay unchanged. That's because <code>IntStream.boxed()</code> actually wraps the primitive data into their object classes (like <code>int</code> to <code>Integer</code>) and that actually creates new copies of the data.
+    But there's a difference between these two methods. The 1st one just creates a wrapper, so there's no copy. But in the 2nd method there's a copy operation going on underneath. You can test it by modifying <code>a[]</code>. You will see that <code>list</code> object from the 2nd method will stay unchanged. That's because <code>IntStream.boxed()</code> actually wraps the primitive data into their object classes (like from <code>int</code> to <code>Integer</code>) and that actually creates new copies of the data.
     Hence, the time complexity of the 2nd method is <code>O(N)</code>, whereas the time complexity of the 1st method is <code>O(1)</code>. But note that it needs different implementations for different types.
 </p>
 

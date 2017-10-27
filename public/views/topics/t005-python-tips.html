@@ -1,28 +1,40 @@
 <h1>Python Tips and Tricks</h1>
 
+<h2>Start a static HTTP server in any folder</h2>
+<h3>Python 2</h3>
+<code>python -m SimpleHTTPServer 8080</code>
+<h3>Python 3</h3>
+<code>python -m htp.server 8080</code>
+<p>It will run a static HTTP server at http://localhost:8080</p>
+
+<h2>list comprehensions</h2>
+<code data-gist-id="9a9d872521900c52f002b502a861b106" gist-enable-cache="true"></code>
+
+<h2>Unpacking</h2>
+<code data-gist-id="27d22278c1c10123a5510cb3aae41e5a" gist-enable-cache="true"></code>
+
+<h2>Zip - Unzip</h2>
+<code data-gist-id="e5bd60665a307744e6724148fd984380" gist-enable-cache="true"></code>
+
+<h2>Grouping of adjacent elements using <code>zip(*[iter(list)]*n)</code></h2>
 <p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    Coming soon..
+	If we have a list <code>[1,2,3,4]</code>, and we want groups of 2, then the result should be <code>[(1,2),(3,4)]</code>. 
 </p>
+<code data-gist-id="3f022091394d18aca0f519f2ec4aa0c3" gist-enable-cache="true"></code>
+<p>How does that work? </p>
+<code data-gist-id="ee9758c40ad59d2e2e63feab05f5c054" gist-enable-cache="true"></code>
+
+<h2><code>itertools</code></h2>
+<h3>Using <code>izip()</code> in Python 2 instead of zip when the dataset is big</h3>
+<code data-gist-id="2dc2c7b7ab4dd8d2b5106644b49a7ff3" gist-enable-cache="true"></code>
+<p>
+	You can achieve the same with <code>zip()</code> but the difference is in their performances. <code>zip()</code> constructs a new list and returns it, whereas <code>izip()</code> returns an <code>iterator</code> object, it doesn't construct a new list. Hence, it's both space and time efficient.<br>
+	<strong>Note:</strong> There's no <code>izip()</code> in Python 3 because <code>zip()</code> does the same.
+</p>
+
+<h2><code>itertools.combinations()</code></h2>
+
+
+<h2>Generating '120345' from '104' and '235' using <code>itertools.chain()</code></h2>
+<p>In Python 3:</p>
+<code data-gist-id="75ae8443c897aabcee212a0e1fdf4aa9" gist-enable-cache="true"></code>
