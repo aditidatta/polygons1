@@ -12,6 +12,7 @@
 .home span {
     /*margin-left: 10px;*/
     /*font-family: "Courier New", Monospace;*/
+    width: 500px;
     font-size: 16px;
 }
 
