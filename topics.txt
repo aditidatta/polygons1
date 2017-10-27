@@ -5,7 +5,7 @@ Java Tips and Tricks, arrays list arraylist array primitive collectors intstream
 Python Tips and Tricks, python tips tricks, topics, t005-python-tips.html
 Hash some salt and passwords, sha-1 sha-2 sha-3 sha md5 hash function cryptography passwords password unique salt database data base, topics, t006-hash-password.html
 Python map() and filter(), python map filter reduce lambda lambdas, topics, t007-python-map-filter.html
-Java Streams, map, filter and reduce, java map filter reduce lambda lambdas, topics, t008-stream-map-java.html
+Java Streams & map & filter and reduce, java map filter reduce lambda lambdas, topics, t008-stream-map-java.html
 Pointers in C, pointers pointer memory address c, topics, t009-pointers-c.html
 Knuth Morris Pratt - Pattern Searching, string matching pattern match time complexity analysis, topics, t010-kmp-pattern.html
 Green Threads, java green thread multiple threads multithreading multi-threading, topics, t012-green-threads.html
