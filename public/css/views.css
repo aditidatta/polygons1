@@ -9,15 +9,17 @@
     font-weight: bold;
 }*/
 
+.home .container {
+    max-width: 758px;
+}
 
-/*
 .home span {
-    /*margin-left: 10px;
-    /*font-family: "Courier New", Monospace;
-    font-size: 16px;
+    /*margin-left: 10px;*/
+    /*font-family: "Courier New", Monospace;*/
+    font-size: 18px;
 }
 
 .home p {
-    font-size: 16px;
+    font-size: 18px;
 }
-*/
+

@@ -30,12 +30,12 @@
 
     <pre class="prettyprint">
     def filter(condition, l=[]):
-		if not l:
+        if not l:
             return l
-		else:
+        else:
             # for each element in list if the condition is true
             # then, put it to the new list
-			l1 = [x for x in l if condition(x)]
+            l1 = [x for x in l if condition(x)]
         return l1
 	
     >> filter(lambda x : x > 10, [12, 9, 23, 3, 4, 6, 21, 67])
