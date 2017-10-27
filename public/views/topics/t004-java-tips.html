@@ -2,35 +2,17 @@
 
 <h2>1) Alternative of Arrays.asList(T... a) for primitive type arrays </h2>
 <p>
-	You may think it creates a <code>List</code> and copies all the elements from the array to the list. But that's <code>not</code> the case. It just creates a wrapper around the array, no iteration or copies are performed. But it doesn't work with primitive type arrays. If an <code>int[]</code> is sent it will just create a <code>List<int[]></code> object, i.e. the whole array as an element in the list. So what can we do to acheive the same with primitive type arrays? Here's what we can do:
-
-<pre class="prettyprint">
-    int[] a = new int[]{1,2,3,4,5,6,7,8}; 
-	
-    List<Integer> wlist = new AbstractList<Integer>() {
-        public Integer get(int i) {
-            return a[i];
-        }
-        
-        public int size() {
-            return a.length;
-        }
-        
-        public Integer set(int i, Integer num) {
-            int val = a[i];
-            a[i] = num;
-            return val;
-        }
-    };
-    // now we have a List wrapper to the int[] array
-</pre>
+    You may think it creates a <code>List</code> and copies all the elements from the array to the list. But that's <code>not</code> the case. It just creates a wrapper around the array, no iteration or copies are performed. But it doesn't work with primitive
+    type arrays. If an <code>int[]</code> is sent it will just create a <code>List<int[]></code> object, i.e. the whole array as an element in the list. So what can we do to acheive the same with primitive type arrays? Here's what we can do:
 </p>
+<code data-gist-id="8024d58004072c349c730c9d2ce0ecf3" gist-enable-cache="true"></code>
 <p>
-	Now, there's another way to do it, that is by creating stream (we will discuss about streams soon) of the array: 
-<pre class="prettyprint">
-    List<Integer> list = IntStream.of(a).boxed().collect(Collectors.toList());
-</pre>
-	But there's a difference between these two methods. The 1st one just creates a wrapper, so there no copy. But in the 2nd method theres a copy operation going on underneath. You can test it by modifying <code>a[]</code>. You will see that <code>list</code> object from the 2nd method will stay unchanged. That's because <code>IntStream.boxed()</code> actually wraps the primitive data into their object classes (like <code>int</code> to <code>Integer</code>) and that actually creates new copies of the data. Hence, the time complexity of the 2nd method is <code>O(N)</code>, whereas the time complexity of the 1st method is <code>O(1)</code>. But note that it needs different implementations for different types. 
+    Now, there's another way to do it, that is by creating stream (we will discuss about streams soon) of the array:
+</p>
+<code data-gist-id="1edb7b85ae084cb3979f9614e6a2a223" gist-enable-cache="true"></code>
+<p>
+    But there's a difference between these two methods. The 1st one just creates a wrapper, so there no copy. But in the 2nd method theres a copy operation going on underneath. You can test it by modifying <code>a[]</code>. You will see that <code>list</code>    object from the 2nd method will stay unchanged. That's because <code>IntStream.boxed()</code> actually wraps the primitive data into their object classes (like <code>int</code> to <code>Integer</code>) and that actually creates new copies of the data.
+    Hence, the time complexity of the 2nd method is <code>O(N)</code>, whereas the time complexity of the 1st method is <code>O(1)</code>. But note that it needs different implementations for different types.
 </p>
 
-<h2>More to come soon</h2>
+<h2>More to come soon...</h2>
