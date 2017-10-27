@@ -1,1 +1,1 @@
-angular.module('polygons', ['ngRoute', 'appRoutes', 'MainCtrl','SearchCtrl', 'TopicCtrl', 'ProjCtrl', 'ResearchCtrl', 'ArticleService']);
+angular.module('polygons', ['gist-embed', 'ngRoute', 'appRoutes', 'MainCtrl','SearchCtrl', 'TopicCtrl', 'ProjCtrl', 'ResearchCtrl', 'ArticleService']);
