@@ -2,8 +2,8 @@
 
 <h2>1) Arrays.asList(T... a) like method for primitive type arrays </h2>
 <p>
-    You may think Arrays.asList(T... a) creates a <code>List</code> creates a wrapper around a regular array <code>a[]</code> so that the array can be used as a list with different methods in java collections. Here, no iteration or copies are performed. So the time complexity is <code>O(1)</code>. But it doesn't work with the primitive
-    type arrays. If an <code>int[]</code> is sent, it will just create a <code>List&ltint[]&gt</code> object, i.e. the whole array as an element in the list. So what can we do to acheive the same with primitive type arrays? Here's what we can do:
+    Arrays.asList(T... a) creates a <code>List</code> which is just a wrapper around a regular array <code>a[]</code>. That array then can be used as a list with different methods in java collections. Here, no iteration or copies are performed. Hence, the time complexity is <code>O(1)</code>. But it doesn't work with the primitive
+    type arrays. If an <code>int[]</code> is passed, it will just create a <code>List&ltint[]&gt</code> object, i.e. the whole array as an element in the list. So, what can we do to acheive the same with primitive type arrays? Here's what we can do:
 </p>
 <code data-gist-id="8024d58004072c349c730c9d2ce0ecf3" gist-enable-cache="true"></code>
 <p>
@@ -24,7 +24,9 @@
 	<code data-gist-id="7336bf21bece4c65126950e81332cac5" gist-enable-cache="true"></code>
 </p>
 <h2>4) String pool</h2>
-<p></p>
+<p>
+	<code data-gist-id="3a92eee29be332b83adeca0d5d408896" gist-enable-cache="true"></code>
+</p>
 <h2>5) Use lambdas</h2>
 <p></p>
 <h2>6) Use Iterators when modifying the data structure</h2>
